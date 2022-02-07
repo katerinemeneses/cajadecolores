@@ -1,0 +1,117 @@
+/*-----------------------------------------------------
+ESTILOS GLOBALES
+-------------------------------------------------------*/
+
+:root{
+    --color-turquesa: hsl(184, 74%, 44%);
+    --color-violeta: hsl(276, 61%, 39%);
+    --color-rosa-chicle: hsl(309, 64%, 47%) ;
+    --color-rosa-bebe: hsl(332, 87%, 70%) ;
+    --color-gris:hsl(0, 0%, 93%);
+    --color-blanco: hsl(0, 0%, 100%);
+    --color-negro: hsl(120, 1%, 14%);
+    --fuente: Verdana, Geneva, Tahoma, sans-serif;
+}
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    height: 100vh;
+    background-color: var(--color-gris) ;
+    font-family: var(--fuente);
+    padding: 1em;
+
+    display: grid;
+    place-items: center;
+}
+
+/*-----------------------------------------------------
+ESTILOS AL CONTENEDOR PADRE
+-------------------------------------------------------*/
+
+.conten-h1{
+font-size: 2rem;
+text-align: center;
+color: var(--color-blanco);
+font-weight: 100;
+margin-bottom: 1em;
+text-shadow: 2px 2px 10px var(--color-rosa-chicle);
+}
+
+/*-----------------------------------------------------
+ESTILOS AL CONTENEDOR PADRE
+-------------------------------------------------------*/
+
+.contenedor__div{
+    width: 18em;
+    background-color: var(--color-blanco);
+    padding: 1em;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+
+    display: grid;
+    gap: 1em;
+}
+
+/*-----------------------------------------------------
+ESTILOS A LOS HIJOS DEL CONTENEDOR
+-------------------------------------------------------*/
+
+.contenedor__div--hijo{
+    height: 6em;
+    background-color: var(--color-blanco);
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+
+    display: grid;
+    place-items: center;
+}
+.contenedor__div--hijo:first-child.color{
+    background-color: var(--color-turquesa);
+}
+.contenedor__div--hijo:nth-child(2).color{
+    background-color: var(--color-violeta);
+}
+.contenedor__div--hijo:nth-child(3).color{
+    background-color: var(--color-rosa-chicle);
+}
+.contenedor__div--hijo:last-child.color{
+    background-color: var(--color-rosa-bebe);
+  
+}
+.contenedor__div--hijo:first-child.color,
+.contenedor__div--hijo:nth-child(2).color,
+.contenedor__div--hijo:nth-child(3).color,
+.contenedor__div--hijo:last-child.color{
+    color: var(--color-blanco);
+}
+
+/*------------------------------------
+ESTILOS A LOS H4
+--------------------------------------*/
+.contenedor__div-hijo--h4{
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+/*------------------------------------
+MEDIA QUERY
+--------------------------------------*/
+
+@media (min-width: 500px) {
+    .contenedor__div{
+        width: 30em;
+    }
+    .conten-h1{
+        font-size:2.5em;
+    }
+}
+@media (min-width: 1000px) {
+    .conten-h1{
+        font-size:3em;
+        width: 50%;
+        margin-bottom: .5em;
+    }
+}
